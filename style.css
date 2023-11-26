@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('./fonts/PressStart2P-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     font-family: 'Press Start 2P', cursive; /* Fonte estilo retro */
     background-color: #000; /* Fundo preto para destacar as cores */
@@ -59,13 +67,20 @@ nav ul li a:hover, nav ul li a:focus {
     font-size: 18px;
 }
 
-#homeCarousel {
-    max-height: 500px;
-    overflow: hidden;
+#homeCarousel .carousel-item {
+    height: 500px; /* Define a altura do carrossel */
 }
 
 #homeCarousel img {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 /* Estilos adicionais para seções específicas */
+
+/* Adicionar fonte do Google Fonts no <head> do seu HTML */
+/* <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> */
