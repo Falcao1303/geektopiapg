@@ -59,7 +59,13 @@ nav ul li a:hover, nav ul li a:focus {
     font-size: 18px;
 }
 
-/* Estilos adicionais para seções específicas */
+#homeCarousel {
+    max-height: 500px;
+    overflow: hidden;
+}
 
-/* Adicionar fonte do Google Fonts no <head> do seu HTML */
-/* <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> */
+#homeCarousel img {
+    width: 100%;
+    height: auto;
+}
+/* Estilos adicionais para seções específicas */
