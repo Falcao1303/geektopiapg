@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh3y/pixi/pixi.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/768b1709a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -16,20 +17,20 @@
                 <li><a href="#organizadores">Organizadores</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#edicoes-anteriores">Edições Anteriores</a></li>
-                <li><a href="#contato">Contato</a></li>
                 <li><a href="#sobre-ccpop">Sobre CCPop</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     <!-- Seções do conteúdo aqui -->
 
-    <section id="em-construcao">
+    <!-- <section id="em-construcao">
         <div class="construcao-container">
             <h2>Em Construção</h2>
             <p>Desculpe pelo transtorno, estamos trabalhando para trazer o melhor conteúdo para você!</p>
         </div>
-    </section>
-    <!-- <section id="home">
+    </section> -->
+    <section id="home">
         <div id="homeCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -54,8 +55,112 @@
         <h1>Bem-vindo ao Geektopia!</h1>
         <p>Descrição sobre o evento...</p>
     </section>
-<!--  -->
+
     <section id="organizadores">
+        <h2>Organizadores</h2>
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Conselho de Cultura POP - Ponta Grossa - Paraná</h3>
+                    <p>Conselho fundado em 27/05/2023, com a idéia de reunir as mentes nerds
+                        da cidade de Ponta Grossa - Paraná, com o objetivo de fomentar ainda mais um cenário
+                        que hoje na região dos campos gerais ainda não é tão explorado, onde amantes da cultura pop,
+                        fãs de animes, filmes, séries, livros, amantes da cultura coreana, japonesa e cosplayers podem 
+                        ter um evento, um encontro com amigos, compartilhar seus trabalhos e apresentar tudo isso cada vez mais 
+                        a comunidade que hoje carece de eventos e ativações desse tipo.
+                        Contribuindo com o turismo na região e também trazendo cada vez mais amantes desse tipo de cultura para cidade,
+                        trocando experiências e promovendo o apoio ao turismo em nossa cidade.
+                    </p>
+            </div>
+            <div class="content-image" >
+                <img src="./images/logo_ccpop.PNG" id="logo_ccpop" alt="Organizador 1">
+            </div>
+        </div>
+        <!-- Adicione mais divs de content-row conforme necessário -->
+    </section>
+    
+    <section id="sobre">
+        <h2>Sobre o Evento</h2>
+        <div class="content-row">
+            <div class="content-image">
+                <img src="./images/geektopia2.JPG" alt="Sobre o Evento">
+            </div>
+            <div class="content-text">
+                <p>Descrição detalhada sobre o evento...</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="edicoes-anteriores">
+        <h2>Edições Anteriores</h2>
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Edições 2023</h3>
+                <p>Resumo da edição anterior...</p>
+            </div>
+            <div class="content-image">
+                <img src="./images/geektopia2.JPG" alt="Edição 2023">
+            </div>
+        </div>
+        <!-- Adicione mais divs de content-row conforme necessário -->
+    </section>
+    
+    
+    <section id="sobre-ccpop">
+        <h2>Sobre CCPop</h2>
+        <div class="content-row">
+            <div class="content-text">
+                <h3>História da CCPop</h3>
+                <p>Descrição da história da CCPop...</p>
+            </div>
+            <div class="content-image">
+                <img src="./images/geektopia2.JPG" alt="CCPop">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="content-row">
+            <div class="content-image">
+                <img src="./images/geektopia2.JPG" alt="Contato">
+            </div>
+            <div class="content-text">
+                <p>Informações de contato...</p>
+                <ul class="contact-list">
+                    <li>
+                        <a href="https://www.instagram.com/ccpop.pg/" class="links">
+                            <span>
+                                <i class="fa-brands fa-instagram fa-2xl"  aria-hidden="true"></i> @ccpop.pg
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/geektopia.pg/" class="links">
+                            <span>
+                                <i class="fa-brands fa-instagram fa-2xl"  aria-hidden="true"></i> @geektopia.pg
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@ccpop.pg" class="links">
+                            <span>
+                                <i class="fa-brands fa-tiktok fa-2xl"  aria-hidden="true"></i> @ccpop.pg
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:cocpopg.contato@gmail.com" class="links">
+                            <span>
+                                <i class="fa-solid fa-envelope fa-2xl"  aria-hidden="true"></i> cocpopg.contato@gmail.com
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="organizadores">
         <h2>Organizadores</h2>
         <p></p>
     </section>
@@ -80,6 +185,13 @@
         <p></p>
     </section> -->
 </body>
+<script>
+    $(document).ready(function() {
+        $(".content-row:even").each(function() {
+            $(this).find(".content-text").insertAfter($(this).find(".content-image"));
+        });
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

@@ -84,3 +84,48 @@ nav ul li a:hover, nav ul li a:focus {
 
 /* Adicionar fonte do Google Fonts no <head> do seu HTML */
 /* <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> */
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top:50px;
+}
+
+.content-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.content-image {
+    width: 50%;
+    height: auto;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.links {
+    text-decoration: none;
+    color: #333; /* Cor de texto desejada */
+}
+
+.links:hover {
+    color: #007BFF; /* Cor de texto ao passar o mouse */
+}
+
+#logo_ccpop {
+    width: 50%;
+}
