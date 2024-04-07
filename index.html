@@ -130,7 +130,23 @@
         <h2>Contato</h2>
         <div class="content-row">
             <div class="content-image">
-                <img src="./images/geektopia2.JPG" alt="Contato">
+                <h2>Fale Conosco</h2>
+                <form   action="https://formspree.io/f/xvoevzyr"method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="_replyto" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="Novo formulário de contato recebido">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
             <div class="content-text">
                 <p>Informações de contato...</p>
@@ -167,31 +183,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section id="organizadores">
-        <h2>Organizadores</h2>
-        <p></p>
-    </section>
-
-    <section id="sobre">
-        <h2>Sobre o Evento</h2>
-        <p></p>
-    </section>
-
-    <section id="edicoes-anteriores">
-        <h2>Edições Anteriores</h2>
-        <p></p>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p></p>
-    </section>
-
-    <section id="sobre-ccpop">
-        <h2>Sobre CCPop</h2>
-        <p></p>
-    </section> -->
 </body>
 <script>
     $(document).ready(function() {
