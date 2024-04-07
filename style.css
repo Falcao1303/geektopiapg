@@ -181,3 +181,17 @@ nav ul li a:hover::before, nav ul li a:focus::before {
 #logo_ccpop {
     width: 50%;
 }
+
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column;
+    }
+
+    .content-text, .content-image {
+        width: 100%;
+    }
+
+    .content-image {
+        margin-bottom: 20px; /* Adiciona um espaçamento entre a imagem e o texto */
+    }
+}
