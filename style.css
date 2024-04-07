@@ -1,23 +1,43 @@
 @font-face {
-    font-family: 'Press Start 2P';
-    src: url('./fonts/PressStart2P-Regular.ttf') format('truetype');
+    font-family: 'Bungee';
+    src: url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
     font-weight: normal;
     font-style: normal;
 }
 
+/* Cores atualizadas */
+/* #CAF6FF azul */
+/* #68DA6A verde */
+/* #2B6DDD fonte */
+/* #FFFFFF fonte */
 
 body {
-    font-family: 'Press Start 2P', cursive; /* Fonte estilo retro */
-    background-color: #000; /* Fundo preto para destacar as cores */
-    color: #fff; /* Texto branco para contraste */
+    font-family: 'Bungee', sans-serif;
+    background-color: #CAF6FF; /* Fundo azul */
+    color: #2B6DDD; /* Texto azul escuro */
     text-align: center;
 }
 
 header {
-    background-color: #1c1c1c; /* Cabeçalho escuro */
-    color: #f0f0f0; /* Texto claro no cabeçalho */
+    background-color: #68DA6A; /* Cabeçalho verde */
+    color: #FFFFFF; /* Texto branco no cabeçalho */
     padding: 20px 0;
-    border-bottom: 4px solid #f0f0f0; /* Borda inferior estilo pixel */
+    font-weight: 600;
+    border-bottom: 4px solid #FFFFFF;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #68DA6A;
 }
 
 nav ul {
@@ -31,21 +51,31 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4af; /* Cor brilhante para os links */
+    color: #2B6DDD; /* Cor azul para os links */
     text-decoration: none;
     font-size: 16px;
-    letter-spacing: 3px; /* Espaçamento entre letras para efeito retro */
+    letter-spacing: 3px;
+    position: relative;
 }
 
-nav ul li a:hover, nav ul li a:focus {
-    color: #fa4; /* Cor ao passar o mouse ou focar */
-    text-shadow: 0 0 10px #fa4; /* Sombra para destacar */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #2B6DDD;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
-
+nav ul li a:hover::before, nav ul li a:focus::before {
+    transform: scaleX(1);
+}
 
 #em-construcao {
-    background: #f2f2f2;
+    background: #68DA6A; /* Fundo verde */
     padding: 50px 0;
     text-align: center;
 }
@@ -53,22 +83,36 @@ nav ul li a:hover, nav ul li a:focus {
 .construcao-container {
     display: inline-block;
     padding: 20px;
-    border: 3px dashed #333;
+    border: 3px dashed #FFFFFF;
     margin: 0 auto;
+    position: relative;
 }
 
 .construcao-container h2 {
-    color: #d9534f; /* Cor vermelha para destacar */
+    color: #2B6DDD;
     font-size: 24px;
 }
 
 .construcao-container p {
-    color: #333;
+    color: #FFFFFF;
     font-size: 18px;
 }
 
+.home-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+#edicoes-anteriores .carousel-inner .carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
 #homeCarousel .carousel-item {
-    height: 500px; /* Define a altura do carrossel */
+    height: 500px;
 }
 
 #homeCarousel img {
@@ -78,29 +122,37 @@ nav ul li a:hover, nav ul li a:focus {
     width: auto;
     height: 100%;
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    object-fit: cover;
 }
-/* Estilos adicionais para seções específicas */
-
-/* Adicionar fonte do Google Fonts no <head> do seu HTML */
-/* <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> */
 
 .content-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .content-text {
     flex: 1;
     padding-right: 20px;
+    border-right: 2px dashed #FFFFFF;
 }
 
 .content-image {
     width: 50%;
     height: auto;
+    position: relative;
+}
+
+.content-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    width: 3px;
+    background-color: #FFFFFF;
 }
 
 .content-image img {
@@ -119,11 +171,11 @@ nav ul li a:hover, nav ul li a:focus {
 
 .links {
     text-decoration: none;
-    color: #333; /* Cor de texto desejada */
+    color: #2B6DDD;
 }
 
 .links:hover {
-    color: #007BFF; /* Cor de texto ao passar o mouse */
+    color: #68DA6A;
 }
 
 #logo_ccpop {
