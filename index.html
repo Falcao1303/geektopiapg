@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh3y/pixi/pixi.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({duration: 800});
+</script>
     <script src="https://kit.fontawesome.com/768b1709a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,13 +35,17 @@
         </div>
     </section> -->
     <section id="home">
-        <img src="./images/geektopia_cover.PNG" alt="Imagem Estática" class="home-image">
-        <h1>Bem-vindo ao Geektopia!</h1>
-        <p>Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!!!
-            Feito por amantes de tudo que há de incrível na cultura nerd e geek!!!
-            Um lugar feito para conhecer, sentir e viver a GEEKTOPIA!!!
-        </p>
+        <div class="container text-center">
+            <img src="./images/geektopia_cover.PNG" alt="Imagem Estática" class="home-image mb-4">
+            <h1>Bem-vindo ao Geektopia!</h1>
+            <p class="mx-auto" style="max-width: 800px;">
+                Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!
+                Feito por amantes de tudo que há de incrível na cultura nerd e geek.
+                Um lugar feito para conhecer, sentir e viver a <strong>GEEKTOPIA</strong>!
+            </p>
+        </div>
     </section>
+    
 
     <section id="organizadores">
         <h2>Organização</h2>
