@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: Falcao1303/geektopiapg
   branch: master
 
 
