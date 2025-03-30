@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: master
 
 auth_backend:
-  name: Geektopia CMS
+  name: auth0
   domain: geektopiapg.us.auth0.com
   client_id: 6i6lYJHJquceHHc92tvsFziKCpOyjMOW
 
