@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Falcao1303/geektopiapg
   branch: master
 
 auth_backend:
