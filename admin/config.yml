@@ -1,7 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Falcao1303/geektopiapg
   branch: master
-
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
