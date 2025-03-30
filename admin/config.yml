@@ -5,7 +5,7 @@ backend:
 auth_backend:
   name: auth0
   domain: geektopiapg.us.auth0.com
-  client_id: '6i6lYJHJquceHHc92tvsFziKCpOyjMOW'
+  client_id: 'RoMqeBMmHKq1yRnEd3mMlIC7XPRsbMl5'  # Copie o client_id da nova aplicação criada (Geektopia CMS Web)
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
