@@ -1,214 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geektopia</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh3y/pixi/pixi.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geektopia</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh3y/pixi/pixi.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
     AOS.init({duration: 800});
-</script>
-    <script src="https://kit.fontawesome.com/768b1709a6.js" crossorigin="anonymous"></script>
+  </script>
+  <script src="https://kit.fontawesome.com/768b1709a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#organizadores">Organizadores</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#edicoes-anteriores">Edições Anteriores</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Seções do conteúdo aqui -->
+  <div class="container mt-4">
+    <ul class="nav nav-tabs justify-content-center" id="geektopiaTabs" role="tablist">
+      <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#organizadores">Organizadores</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sobre">Sobre</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#edicoes-anteriores">Edições</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#contato">Contato</a></li>
+    </ul>
 
-    <!-- <section id="em-construcao">
-        <div class="construcao-container">
-            <h2>Em Construção</h2>
-            <p>Desculpe pelo transtorno, estamos trabalhando para trazer o melhor conteúdo para você!</p>
+    <div class="tab-content mt-4">
+      <div class="tab-pane fade show active" id="home">
+        <div class="text-center">
+          <img src="./images/BannerSiteGeektopia.png" alt="Imagem Estática" class="home-image mb-4">
+          <h1>Bem-vindo ao Geektopia!</h1>
+          <p class="mx-auto" style="max-width: 800px;">
+            Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!
+            Feito por amantes de tudo que há de incrível na cultura nerd e geek.
+            Um lugar feito para conhecer, sentir e viver a <strong>GEEKTOPIA</strong>!
+          </p>
         </div>
-    </section> -->
-    <section id="home">
-        <div class="container text-center">
-            <img src="./images/BannerSiteGeektopia.png" alt="Imagem Estática" class="home-image mb-4">
-            <h1>Bem-vindo ao Geektopia!</h1>
-            <p class="mx-auto" style="max-width: 800px;">
-                Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!
-                Feito por amantes de tudo que há de incrível na cultura nerd e geek.
-                Um lugar feito para conhecer, sentir e viver a <strong>GEEKTOPIA</strong>!
-            </p>
+            <div id="countdown" class="mt-4 p-3 rounded text-white text-center font-weight-bold shadow-sm" style="
+            font-size: 1.5rem;
+            background-color: rgba(43, 109, 221, 0.85);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            ">
+              Carregando contador...
+            </div>
+        <div>
+            <div class="container text-center">
+                <img src="./images/patrocinio.png" alt="Imagem Estática" class="home-image mb-4">
+            </div>
         </div>
-    </section>
-    
+      </div>
 
-    <section id="organizadores">
+      <div class="tab-pane fade" id="organizadores">
         <h2>Organização</h2>
-        <div class="content-row">
-            <div class="content-text">
-                <h3>Conselho de Cultura POP - Ponta Grossa - Paraná</h3>
-                    <p>Conselho fundado em 27/05/2023, com a idéia de reunir as mentes nerds
-                        da cidade de Ponta Grossa - Paraná, com o objetivo de fomentar ainda mais um cenário
-                        que hoje na região dos campos gerais ainda não é tão explorado, onde amantes da cultura pop,
-                        fãs de animes, filmes, séries, livros, amantes da cultura coreana, japonesa e cosplayers podem 
-                        ter um evento, um encontro com amigos, compartilhar seus trabalhos e apresentar tudo isso cada vez mais 
-                        a comunidade que hoje carece de eventos e ativações desse tipo.
-                        Contribuindo com o turismo na região e também trazendo cada vez mais amantes desse tipo de cultura para cidade,
-                        trocando experiências e promovendo o apoio ao turismo em nossa cidade.
-                    </p>
-            </div>
-            <div class="content-image" >
-                <img src="./images/logo_ccpop.PNG" id="logo_ccpop" alt="Organizador 1">
-            </div>
+        <div class="row align-items-center">
+          <div class="content-text col-md-6">
+            <h3>Conselho de Cultura POP - Ponta Grossa - Paraná</h3>
+            <p>Conselho fundado em 27/05/2023, com a idéia de reunir as mentes nerds
+                da cidade de Ponta Grossa - Paraná, com o objetivo de fomentar ainda mais um cenário
+                que hoje na região dos campos gerais ainda não é tão explorado, onde amantes da cultura pop,
+                fãs de animes, filmes, séries, livros, amantes da cultura coreana, japonesa e cosplayers podem 
+                ter um evento, um encontro com amigos, compartilhar seus trabalhos e apresentar tudo isso cada vez mais 
+                a comunidade que hoje carece de eventos e ativações desse tipo.
+                Contribuindo com o turismo na região e também trazendo cada vez mais amantes desse tipo de cultura para cidade,
+                trocando experiências e promovendo o apoio ao turismo em nossa cidade.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="./images/logo_ccpop.PNG" class="img-fluid" alt="Organizador">
+          </div>
         </div>
-    </section>
-    
-    <section id="sobre">
-        <h2>Sobre o Evento</h2>
-        <div class="content-row">
-            <div class="content-image">
-                <img src="./images/geektopia2.JPG" alt="Sobre o Evento">
-            </div>
-            <div class="content-text">
-                <p>O evento Geektopia surgiu da idéia de várias mentes do conselho de cultura pop, liderado pela idealizadora 
-                    Ariadene Caillot, que idealizou o também conhecido Geek Festival PG, pensando em oferecer um evento diferente,
-                    abrangente para todos os gostos e pensado por quem frequenta e quem ama a cultura POP, o Geektopia surgia de forma simples e ocorreu
-                    no Teatro Ceci, que comprou nossa idéia para podermos realizar essse evento maravilhoso!
-                    mas pensando alto, dando oportunidade a artistas e lojistas da região, reunindo quem ama games, cosplay, kpop e cultura pop em geral.
-                    A organização maior parte feita voluntariamente pelos conselheiros, entregou uma primeira edição de muito sucesso e ingressos esgotados!
-                    Com uma segunda edição pensando em algo mais comemorativo e em auxílio de causas maiores, tivemos arrecadação de ração para um abrigo
-                    de gatos, onde foram arrecadados quilos comida para gato e também um grande encontro feito para amantes de karaokê e cosplay, finalizando assim
-                    um grande evento de Natal! 
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="edicoes-anteriores">
-        <h2>Edições Anteriores</h2>
-        <div class="content-row">
-            <div class="content-text">
-                <h2><strong>Edições 2023</strong></h2>
-                <h3>1ª Edição</h3>
-                <pPúblico:><strong></strong> 330 Pessoas</p>
-                    <p><strong>Local:</strong> Teatro CECI</p>
-                    <p>A primeira edição contou com ingressos esgotados.
-                       Atrações:
-                       Artist Alley, Games, Concurso K-pop, Apresentação K-pop, Concurso de desfile e apresentação cosplay, lojas dos parceiros, workshops
-                       e atração musical.     
-                    </p>
-                    <h3>2ª Edição: Natal Otaku</h3>
-                    <p><strong>Público:</strong> 317 Pessoas</p>
-                        <p><strong>Local:</strong>A pizza Frita</p>
-                        <p>A segunda edição contou com ingressos esgotados também, porém limitados.
-                           Atrações:
-                           Games, Apresentação K-pop, Concurso de desfile cosplay, lojas dos parceiros.     
-                        </p>                   
-            </div>
-            <div class="content-image">
-                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="./images/geektopia1.JPG" alt="Primeiro Slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./images/geektopia2.JPG" alt="Segundo Slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-90" src="./images/geektopia3.JPG" alt="Terceiro Slide">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Próximo</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Adicione mais divs de content-row conforme necessário -->
-    </section>
+      </div>
 
-    <section id="home">
-        <div class="container text-center">
-            <img src="./images/patrocinio.png" alt="Imagem Estática" class="home-image mb-4">
+      <div class="tab-pane fade" id="sobre">
+        <h2>Sobre o Evento</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="./images/geektopia2.JPG" class="img-fluid" alt="Sobre o Evento">
+          </div>
+          <div class="content-text col-md-6">
+            <p>O evento Geektopia surgiu da idéia de várias mentes do conselho de cultura pop, liderado pela idealizadora 
+                Ariadene Caillot, que idealizou o também conhecido Geek Festival PG, pensando em oferecer um evento diferente,
+                abrangente para todos os gostos e pensado por quem frequenta e quem ama a cultura POP, o Geektopia surgia de forma simples e ocorreu
+                no Teatro Ceci, que comprou nossa idéia para podermos realizar essse evento maravilhoso!
+                mas pensando alto, dando oportunidade a artistas e lojistas da região, reunindo quem ama games, cosplay, kpop e cultura pop em geral.
+                A organização maior parte feita voluntariamente pelos conselheiros, entregou uma primeira edição de muito sucesso e ingressos esgotados!
+                Com segunda e terceiras edições de muito sucesso e ingressos esgotados, hoje o céu é o limite para quem quer viver a Geektopia! </p>
+          </div>
         </div>
-    </section>
-    
-    <section id="contato">
+      </div>
+
+      <div class="tab-pane fade" id="edicoes-anteriores">
+        <h2>Edições Anteriores</h2>
+        <div class="row">
+          <div class="content-text col-md-6">
+            <h2><strong>Edições 2023</strong></h2>
+            <h3>1ª Edição</h3>
+            <p>Público:><strong></strong> 330 Pessoas</p>
+                <p><strong>Local:</strong> Teatro CECI</p>
+                <p>A primeira edição contou com ingressos esgotados.
+                   Atrações:
+                   Artist Alley, Games, Concurso K-pop, Apresentação K-pop, Concurso de desfile e apresentação cosplay, lojas dos parceiros, workshops
+                   e atração musical.     
+                </p>
+                <h3>2ª Edição: Natal Otaku</h3>
+                <p><strong>Público:</strong> 317 Pessoas</p>
+                    <p><strong>Local:</strong>A pizza Frita</p>
+                    <p>A segunda edição contou com ingressos esgotados também, porém limitados.
+                       Atrações:
+                       Games, Apresentação K-pop, Concurso de desfile cosplay, lojas dos parceiros.     
+                </p>  
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div id="carouselEdi" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./images/geektopia1.JPG" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/geektopia2.JPG" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/geektopia3.JPG" class="d-block w-100" alt="Slide 3">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselEdi" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next" href="#carouselEdi" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div id="carouselEdi" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/3edicao-1.jpg" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/3edicao2.jpg" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/3edicao3.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/3edicao4.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/3edicao5.JPG" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/3edicao6.JPG" class="d-block w-100" alt="Slide 3">
+                    </div>
+
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselEdi" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselEdi" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+                </div>
+              </div>
+            <div class="content-text col-md-6">
+              <h2><strong>Edições 2024</strong></h2>
+              <h3>3ª Edição</h3>
+              <p>Público:><strong></strong> 2500 Pessoas</p>
+                  <p><strong>Local:</strong>AABB- Associação Banco do Brasil</p>
+                  <p>Terceira Edição com ingressos esgotados.
+                     Primeiro evento nos Campos Gerais a contar com dubladores nacionais como convidados. 
+                     Atrações:
+                     Artist Alley,RPG e Card Game, Games, Concurso K-pop, Apresentação K-pop, Concurso de desfile e apresentação cosplay, lojas dos parceiros, workshops
+                     ,atração musical e dubladores.    
+                  </p>
+                  <h3>Geektopia de Halloween</h3>
+                  <p><strong>Público:</strong> 317 Pessoas</p>
+                      <p><strong>Local:</strong>Billi's Burguer</p>
+                      <p>A edição de Halloween contou com ingressos esgotados também, porém limitados.
+                         Atrações:
+                         Card Game Apresentação K-pop, Concurso de desfile cosplay, lojas dos parceiros.     
+                  </p>  
+            </div>
+          </div>
+      </div>
+
+      <div class="tab-pane fade" id="contato">
         <h2>Contato</h2>
-        <div class="content-row">
-            <div class="content-image">
-                <h2>Fale Conosco</h2>
-                <form   action="https://formspree.io/f/xvoevzyr"method="POST" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="_replyto" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                    </div>
-                    <input type="hidden" name="_subject" value="Novo formulário de contato recebido">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-            <div class="content-text">
-                <p>Informações de contato...</p>
-                <ul class="contact-list">
-                    <li>
-                        <a href="https://www.instagram.com/ccpop.pg/" class="links">
-                            <span>
-                                <i class="fa-brands fa-instagram fa-2xl"  aria-hidden="true"></i> @ccpop.pg
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/geektopia.pg/" class="links">
-                            <span>
-                                <i class="fa-brands fa-instagram fa-2xl"  aria-hidden="true"></i> @geektopia.pg
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.tiktok.com/@ccpop.pg" class="links">
-                            <span>
-                                <i class="fa-brands fa-tiktok fa-2xl"  aria-hidden="true"></i> @ccpop.pg
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:cocpopg.contato@gmail.com" class="links">
-                            <span>
-                                <i class="fa-solid fa-envelope fa-2xl"  aria-hidden="true"></i> cocpopg.contato@gmail.com
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="row">
+          <div class="col-md-6">
+            <form action="https://formspree.io/f/xvoevzyr" method="POST">
+              <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" name="_replyto" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea name="message" class="form-control" rows="5" required></textarea>
+              </div>
+              <input type="hidden" name="_subject" value="Novo formulário de contato recebido">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/ccpop.pg/">@ccpop.pg</a></li>
+              <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/geektopia.pg/">@geektopia.pg</a></li>
+              <li><i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@ccpop.pg">@ccpop.pg</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:cocpopg.contato@gmail.com">cocpopg.contato@gmail.com</a></li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    const eventDate = new Date("2025-07-19T10:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+  
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+  
+      if (timeLeft < 0) {
+        countdownElement.innerHTML = "O evento já começou!";
+        return;
+      }
+  
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+      countdownElement.innerHTML = `
+        <span class="mr-2"><strong>${days}</strong> dias</span>
+        <span class="mr-2"><strong>${hours}</strong>h</span>
+        <span class="mr-2"><strong>${minutes}</strong>min</span>
+        <span><strong>${seconds}</strong>s</span>
+        <div class="mt-2" style="font-size: 1rem;">PARA VIVERMOS O GEEKTOPIA!</div>
+      `;
+    };
+  
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+  
 </body>
-<script>
-    $(document).ready(function() {
-        $(".content-row:even").each(function() {
-            $(this).find(".content-text").insertAfter($(this).find(".content-image"));
-        });
-    });
-</script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
