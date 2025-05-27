@@ -56,6 +56,17 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
+.logo-organizador {
+    max-width: 280px;
+    margin: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-organizador:hover {
+    transform: scale(1.05);
+}
+
 #home {
     background: linear-gradient(135deg, #68DA6A 0%, #2B6DDD 100%);
     color: #FFFFFF;
@@ -115,6 +126,7 @@ h1, h2, h3 {
 .content-image img:hover {
     transform: translateY(-10px);
 }
+
 
 #edicoes-anteriores .carousel-inner img {
     max-height: 300px;
