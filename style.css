@@ -1,204 +1,218 @@
-/* Importação de Fontes Modernas */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* --- IMPORTAÇÃO DAS FONTES PIXELADAS --- */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
+/* 'Press Start 2P' para títulos e botões.
+  'VT323' para textos, é mais legível.
+*/
+
+/* --- CONFIGURAÇÕES GLOBAIS --- */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #68DA6A 0%, #2B6DDD 100%);
-    color: #FFFFFF;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  /* O seu gradiente de fundo é ótimo, vamos mantê-lo! */
+  background: linear-gradient(135deg, #68DA6A 0%, #2B6DDD 100%);
+  background-attachment: fixed; /* O fundo não rola com a página */
+  
+  /* Usando a fonte VT323 como padrão para parágrafos */
+  font-family: 'VT323', monospace;
+  font-size: 20px; /* Fontes pixeladas ficam melhores um pouco maiores */
+  color: #FFFFFF;
+  line-height: 1.5;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+h1, h2, h3, h4, h5, h6 {
+  /* Fonte de videogame para todos os títulos */
+  font-family: 'Press Start 2P', cursive;
+  color: #FFFFFF; /* Cor branca para contrastar com o fundo */
+  text-shadow: 2px 2px #000000; /* Sombra dura para dar um ar retrô */
 }
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    margin: 0;
-    list-style: none;
-    flex-wrap: wrap;
+/* --- NAVEGAÇÃO PIXEL --- */
+.nav-pixel {
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  border-bottom: 4px solid #000;
+  padding: 5px;
+  text-align: center;
+  flex-wrap: wrap; /* Permite que os links quebrem a linha em telas pequenas */
+  display: flex;
+  justify-content: center;
 }
 
-header nav ul li {
-    margin: 5px 10px;
+.nav-pixel .nav-link {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 0; /* SEM cantos arredondados */
 }
 
-header nav ul li a {
-    color: #2B6DDD;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+.nav-pixel .nav-link:hover,
+.nav-pixel .nav-link.active {
+  background-color: #68DA6A;
+  color: #000;
 }
 
-header nav ul li a:hover,
-header nav ul li a:focus {
+
+/* --- CAIXA DE CONTEÚDO PIXEL --- */
+.pixel-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 4px solid #000;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3); /* Sombra dura deslocada */
+}
+
+.pixel-box h2, .pixel-box h3 {
+    color: #68DA6A; /* Cor verde para títulos dentro das caixas */
+    text-shadow: 2px 2px #000;
+}
+
+/* --- IMAGENS PIXELADAS --- */
+.pixel-image {
+  border: 4px solid #000;
+  /* Isso faz o navegador não suavizar a imagem ao redimensionar, mantendo os pixels duros */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* --- BOTÃO PIXEL --- */
+.btn-pixel {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  background-color: #68DA6A; /* Verde */
+  color: #000000;
+  border: 3px solid #000000;
+  padding: 15px 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 4px 4px 0px #000000; /* Efeito de sombra dura */
+  position: relative;
+}
+
+.btn-pixel:hover {
+  background-color: #2B6DDD; /* Azul no hover */
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.btn-pixel:active {
+  /* Efeito de botão pressionado */
+  box-shadow: 0px 0px 0px #000000;
+  top: 4px;
+  left: 4px;
+}
+
+/* --- CONTADOR --- */
+#countdown {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  color: #FFFFFF;
+  text-shadow: 3px 3px #000;
+}
+
+/* --- FORMULÁRIO DE CONTATO --- */
+#contato label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
     color: #68DA6A;
 }
 
-section {
-    padding: 40px 15px;
-    max-width: 1200px;
-    margin: auto;
+#contato .form-control {
+  border-radius: 0;
+  border: 3px solid #000;
+  background-color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  color: #000;
 }
 
-h1, h2, h3 {
-    color: #2B6DDD;
-    font-weight: 700;
-    margin-bottom: 15px;
+#contato .form-control:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #68DA6A;
+  box-shadow: none;
 }
 
-.logo-organizador {
-    max-width: 280px;
-    margin: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
 
-.logo-organizador:hover {
-    transform: scale(1.05);
+/* --- LINKS DE CONTATO --- */
+#contato ul {
+  font-size: 1.3rem;
 }
-
-#home {
-    background: linear-gradient(135deg, #68DA6A 0%, #2B6DDD 100%);
+#contato a {
     color: #FFFFFF;
-    padding: 50px 15px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-#home h1, #home p {
-    color: #FFFFFF;
-}
-
-.home-image {
-    border-radius: 10px;
-    max-width: 100%;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.home-image:hover {
-    transform: scale(1.03);
-}
-
-.content-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.content-text {
-    flex: 1;
-    min-width: 260px;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-    background-color: #ffffff;
-    color: #333;
-}
-
-.content-image {
-    flex: 1;
-    min-width: 260px;
-    padding: 15px;
-}
-
-.content-image img {
-    width: 100%;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.content-image img:hover {
-    transform: translateY(-10px);
-}
-
-
-#edicoes-anteriores .carousel-inner img {
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-
-#contato {
-    background-color: #68DA6A;
-    padding: 30px 15px;
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-#contact-form .form-control {
-    border-radius: 8px;
-    border: none;
-    padding: 8px;
-}
-
-#contact-form button.btn-primary {
-    border-radius: 20px;
-    padding: 8px 20px;
-    background-color: #2B6DDD;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: #1d4a9c;
-}
-
-.contact-list a {
-    color: #333;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s;
+}
+#contato a:hover {
+    color: #68DA6A;
+}
+#contato .fab, #contato .fas {
+    margin-right: 10px;
+    color: #68DA6A;
 }
 
-
-.contact-list a:hover {
-    color: #2B6DDD;
+/* --- ESTILOS PARA O CARROSSEL PIXEL --- */
+.carousel {
+  border: 4px solid #000;
 }
 
-.contact-list li {
-    margin-bottom: 15px;
-    line-height: 1.8;
+/* Deixando os botões de controle quadrados e com fundo sólido */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid #000;
+  opacity: 1;
 }
 
-/* Scroll Suave */
-html {
-    scroll-behavior: smooth;
+.carousel-control-prev {
+  left: 10px;
+}
+.carousel-control-next {
+  right: 10px;
 }
 
-/* Responsividade melhorada */
-@media (max-width: 768px) {
-    .content-row {
-        flex-direction: column;
-    }
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #68DA6A;
+}
 
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Trocando o ícone padrão (SVG suave) por um mais simples e branco */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* Remove a imagem de fundo padrão */
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  font-family: monospace; /* Usa uma fonte monoespaçada que parece mais bloco */
+}
 
-    header nav ul li {
-        margin: 5px 0;
-    }
+.carousel-control-prev-icon::after {
+  content: '<'; /* Adiciona o caractere de "menor que" */
+}
 
-    .content-text,
-    .content-image {
-        width: 100%;
-        padding: 10px;
-    }
+.carousel-control-next-icon::after {
+  content: '>'; /* Adiciona o caractere de "maior que" */
+}
+
+/* Ajustando as abas das edições para combinar com o tema */
+#edicoes-anteriores .nav-tabs .nav-link {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border: 3px solid transparent;
+  color: #fff;
+}
+#edicoes-anteriores .nav-tabs .nav-link.active,
+#edicoes-anteriores .nav-tabs .nav-link:hover {
+  border-color: #000;
+  background-color: #68DA6A;
+  color: #000;
+  border-bottom-color: #68DA6A; /* Para conectar com a caixa */
 }

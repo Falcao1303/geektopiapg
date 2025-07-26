@@ -3,304 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geektopia</title>
+  <title>Geektopia - O Evento Mais Geek de PG!</title>
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh3y/pixi/pixi.css">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/768b1709a6.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container mt-4">
-    <ul class="nav nav-tabs justify-content-center" id="geektopiaTabs" role="tablist">
-      <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Home</a></li>
-      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#organizadores">Organizadores</a></li>
-      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sobre">Sobre</a></li>
-      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#edicoes-anteriores">Edições</a></li>
-      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#contato">Contato</a></li>
-    </ul>
 
-    <div class="tab-content mt-4">
+  <nav class="nav nav-tabs nav-pixel fixed-top" id="geektopiaTabs" role="tablist">
+    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    <a class="nav-link" data-toggle="tab" href="#organizadores">Organizadores</a>
+    <a class="nav-link" data-toggle="tab" href="#sobre">Sobre</a>
+    <a class="nav-link" data-toggle="tab" href="#edicoes-anteriores">Edições</a>
+    <a class="nav-link" data-toggle="tab" href="#contato">Contato</a>
+  </nav>
+
+  <div class="container mt-5 pt-5">
+    <div class="tab-content">
+      
       <div class="tab-pane fade show active" id="home">
         <div class="text-center">
-          <img src="./images/BannerSiteGeektopia.png" alt="Imagem Estática" class="home-image mb-4">
-          <h1>Bem-vindo ao Geektopia!</h1>
+          <img src="./images/BannerSiteGeektopia.png" alt="Banner Geektopia" class="img-fluid pixel-image mb-4">
+          <h1 class="mb-3">BEM-VINDO AO GEEKTOPIA!</h1>
           <p class="mx-auto" style="max-width: 800px;">
-            Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!
-            Feito por amantes de tudo que há de incrível na cultura nerd e geek.
+            Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!<br>
+            Feito por amantes de tudo que há de incrível na cultura nerd e geek.<br>
             Um lugar feito para conhecer, sentir e viver a <strong>GEEKTOPIA</strong>!
           </p>
         </div>
-            <div id="countdown" class="mt-4 p-3 rounded text-white text-center font-weight-bold shadow-sm" style="
-            font-size: 1.5rem;
-            background-color: rgba(43, 109, 221, 0.85);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(4px);
-            ">
-              Carregando contador...
-            </div>
-        <div>
-        <div class="container text-center mt-4">
-          <div class="p-4 rounded shadow-sm" style="background-color: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(6px);">
-            <h2 class="mb-3 text-white">Garanta já seu ingresso!</h2>
-            <p class="mb-4" style="color: #fff;">Não fique de fora da próxima edição do <strong>Geektopia</strong>. Clique no botão abaixo para garantir seu lugar!</p>
-            <a href="https://www.uticket.com.br/event/01KWOMMEDFO0BI" target="_blank" class="btn btn-light btn-lg font-weight-bold" style="color: #2B6DDD;">
-              Comprar Ingressos
-            </a>
-          </div>
         
-          <img src="./images/patrocinio.png" alt="Imagem Estática" class="home-image mt-4 mb-4">
+        <div id="countdown" class="pixel-box text-center my-4 p-3">
+          Carregando contador...
         </div>
+        
+        <div class="pixel-box text-center my-4 p-4">
+          <h2 class="mb-3">Garanta já seu ingresso!</h2>
+          <p class="mb-4">Não fique de fora da próxima edição do <strong>Geektopia</strong>. Clique no botão abaixo!</p>
+          <a href="https://www.uticket.com.br/event/01KWOMMEDFO0BI" target="_blank" class="btn-pixel">
+            Comprar Ingressos
+          </a>
         </div>
+
+        <img src="./images/patrocinio.png" alt="Patrocinadores" class="img-fluid pixel-image mt-4">
       </div>
 
       <div class="tab-pane fade" id="organizadores">
-        <h2>Organização</h2>
-        <div class="row align-items-center">
-          <div class="content-text col-md-6">
-            <h3>Conselho de Cultura POP - Ponta Grossa - Paraná</h3>
-            <p>Conselho fundado em 27/05/2023, com a idéia de reunir as mentes nerds
-                da cidade de Ponta Grossa - Paraná, com o objetivo de fomentar ainda mais um cenário
-                que hoje na região dos campos gerais ainda não é tão explorado, onde amantes da cultura pop,
-                fãs de animes, filmes, séries, livros, amantes da cultura coreana, japonesa e cosplayers podem 
-                ter um evento, um encontro com amigos, compartilhar seus trabalhos e apresentar tudo isso cada vez mais 
-                a comunidade que hoje carece de eventos e ativações desse tipo.
-                Contribuindo com o turismo na região e também trazendo cada vez mais amantes desse tipo de cultura para cidade,
-                trocando experiências e promovendo o apoio ao turismo em nossa cidade.</p>
-          </div>
-          <div class="col-md-6">
-            <img src="./images/logo_ccpop.PNG" class="img-fluid logo-organizador" alt="Organizador">
-          </div>
+        <div class="pixel-box p-4">
+            <h2>Organização</h2>
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3>Conselho de Cultura POP - Ponta Grossa</h3>
+                <p>Conselho fundado em 27/05/2023, com a ideia de reunir as mentes nerds de Ponta Grossa - PR para fomentar um cenário ainda pouco explorado na região. Um espaço para fãs de animes, filmes, séries, livros, k-pop e cosplayers compartilharem suas paixões, contribuindo para a cultura e o turismo local.</p>
+              </div>
+              <div class="col-md-4 text-center">
+                <img src="./images/logo_ccpop.PNG" class="img-fluid pixel-image" alt="Logo CCPOP">
+              </div>
+            </div>
         </div>
       </div>
 
       <div class="tab-pane fade" id="sobre">
-        <h2>Sobre o Evento</h2>
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img src="./images/geektopia2.JPG" class="img-fluid" alt="Sobre o Evento">
-          </div>
-          <div class="content-text col-md-6">
-            <p>O evento Geektopia surgiu da idéia de várias mentes do conselho de cultura pop, liderado pela idealizadora 
-                Ariadene Caillot, que idealizou o também conhecido Geek Festival PG, pensando em oferecer um evento diferente,
-                abrangente para todos os gostos e pensado por quem frequenta e quem ama a cultura POP, o Geektopia surgia de forma simples e ocorreu
-                no Teatro Ceci, que comprou nossa idéia para podermos realizar essse evento maravilhoso!
-                mas pensando alto, dando oportunidade a artistas e lojistas da região, reunindo quem ama games, cosplay, kpop e cultura pop em geral.
-                A organização maior parte feita voluntariamente pelos conselheiros, entregou uma primeira edição de muito sucesso e ingressos esgotados!
-                Com segunda e terceiras edições de muito sucesso e ingressos esgotados, hoje o céu é o limite para quem quer viver a Geektopia! </p>
-          </div>
+        <div class="pixel-box p-4">
+            <h2>Sobre o Evento</h2>
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="./images/geektopia2.JPG" class="img-fluid pixel-image" alt="Sobre o Evento">
+              </div>
+              <div class="col-md-6">
+                <p>O Geektopia nasceu da mente criativa do Conselho de Cultura Pop, liderado por Ariadene Caillot. A ideia era criar um evento diferente, pensado por quem ama e frequenta o universo pop. A primeira edição, no Teatro Ceci, foi um sucesso de ingressos esgotados, dando espaço a artistas e lojistas da região. Hoje, após edições de sucesso, o céu é o limite para quem quer viver a Geektopia!</p>
+              </div>
+            </div>
         </div>
       </div>
-
+      
       <div class="tab-pane fade" id="edicoes-anteriores">
-        <h2 class="mb-4">Edições Anteriores</h2>
+          <h2 class="mb-4">Edições Anteriores</h2>
       
-        <!-- Nav Tabs -->
-        <ul class="nav nav-tabs mb-4" id="edicoesTabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="edicao1-tab" data-toggle="tab" href="#edicao1" role="tab">1ª Edição (2023)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="edicao2-tab" data-toggle="tab" href="#edicao2" role="tab">2ª Edição - Natal Otaku (2023)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="edicao3-tab" data-toggle="tab" href="#edicao3" role="tab">3ª Edição (2024)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="edicaoHalloween-tab" data-toggle="tab" href="#edicaoHalloween" role="tab">Halloween (2024)</a>
-          </li>
-        </ul>
-      
-        <!-- Tab Content -->
-        <div class="tab-content" id="edicoesContent">
-      
-          <!-- 1ª Edição -->
-          <div class="tab-pane fade show active" id="edicao1" role="tabpanel">
-            <div class="row">
-              <div class="content-text col-md-6">
-                <h3>1ª Edição</h3>
-                <p><strong>Público:</strong> 330 Pessoas</p>
-                <p><strong>Local:</strong> Teatro CECI</p>
-                <p>Ingressos esgotados. Atrações: Artist Alley, Games, Concurso e Apresentação K-pop, desfile e apresentação cosplay, lojas dos parceiros, workshops e atração musical.</p>
-              </div>
-              <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <div id="carousel1" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active"><img src="./images/geektopia1.JPG" class="d-block w-100" alt="1"></div>
-                    <div class="carousel-item"><img src="./images/geektopia2.JPG" class="d-block w-100" alt="2"></div>
-                    <div class="carousel-item"><img src="./images/geektopia3.JPG" class="d-block w-100" alt="3"></div>
+          <ul class="nav nav-tabs mb-4" id="edicoesTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#edicao1" role="tab">1ª Edição (2023)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#edicao2" role="tab">2ª Edição (2023)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#edicao3" role="tab">3ª Edição (2024)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#edicaoHalloween" role="tab">Halloween (2024)</a>
+            </li>
+
+
+          </ul>
+        
+          <div class="tab-content" id="edicoesContent">
+          
+            <div class="tab-pane fade show active" id="edicao3" role="tabpanel">
+              <div class="pixel-box p-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>1ª Edição</h3>
+                    <p><strong>Público:</strong> 330 Pessoas</p>
+                    <p><strong>Local:</strong> Teatro CECI</p>
+                    <p>Ingressos esgotados. Atrações: Artist Alley, Games, Concurso e Apresentação K-pop, desfile e apresentação cosplay, workshops e atração musical.</p>
                   </div>
-                  <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  </a>
+                  <div class="col-md-6">
+                    <div id="carouselEdicao1" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active"><img src="./images/geektopia1.JPG" class="d-block w-100 pixel-image" alt="1"></div>
+                          <div class="carousel-item"><img src="./images/geektopia2.JPG" class="d-block w-100 pixel-image" alt="2"></div>
+                          <div class="carousel-item"><img src="./images/geektopia3.JPG" class="d-block w-100 pixel-image" alt="3"></div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselEdicao1" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                      <a class="carousel-control-next" href="#carouselEdicao1" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-      
-          <!-- 2ª Edição -->
-          <div class="tab-pane fade" id="edicao2" role="tabpanel">
-            <div class="row">
-              <div class="content-text col-md-6">
-                <h3>2ª Edição: Natal Otaku</h3>
-                <p><strong>Público:</strong> 317 Pessoas</p>
-                <p><strong>Local:</strong> A Pizza Frita</p>
-                <p>Ingressos esgotados. Atrações: Games, Apresentação K-pop, desfile cosplay, lojas dos parceiros.</p>
-              </div>
-              <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <div id="carousel3" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active"><img src="./images/natal1.jpg" class="d-block w-100" alt="1"></div>
-                    <div class="carousel-item"><img src="./images/natal2.jpg" class="d-block w-100" alt="2"></div>
+          
+            <div class="tab-pane fade" id="edicao2" role="tabpanel">
+              <div class="pixel-box p-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>2ª Edição: Natal Otaku</h3>
+                    <p><strong>Público:</strong> 317 Pessoas</p>
+                    <p><strong>Local:</strong> A Pizza Frita</p>
+                    <p>Ingressos esgotados. Atrações: Games, Apresentação K-pop, desfile cosplay, lojas dos parceiros.</p>
                   </div>
-                  <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  </a>
+                  <div class="col-md-6">
+                    <div id="carouselEdicao2" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="./images/natal1.jpg" class="d-block w-100 pixel-image" alt="1"></div>
+                        <div class="carousel-item"><img src="./images/natal2.jpg" class="d-block w-100 pixel-image" alt="2"></div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselEdicao2" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                      <a class="carousel-control-next" href="#carouselEdicao2" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-      
-          <!-- 3ª Edição -->
-          <div class="tab-pane fade" id="edicao3" role="tabpanel">
-            <div class="row">
-              <div class="content-text col-md-6">
-                <h3>3ª Edição</h3>
-                <p><strong>Público:</strong> 2500 Pessoas</p>
-                <p><strong>Local:</strong> AABB - Associação Banco do Brasil</p>
-                <p>Ingressos esgotados. Primeiro evento dos Campos Gerais com dubladores nacionais. Atrações: Artist Alley, RPG, Card Game, Games, Concurso e Apresentação K-pop, desfile cosplay, lojas dos parceiros, workshops, atração musical e dubladores.</p>
-              </div>
-              <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <div id="carousel3" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active"><img src="./images/3edicao-1.jpg" class="d-block w-100" alt="1"></div>
-                    <div class="carousel-item"><img src="./images/3edicao2.jpg" class="d-block w-100" alt="2"></div>
-                    <div class="carousel-item"><img src="./images/3edicao3.jpg" class="d-block w-100" alt="3"></div>
-                    <div class="carousel-item"><img src="./images/3edicao4.jpg" class="d-block w-100" alt="4"></div>
-                    <div class="carousel-item"><img src="./images/3edicao5.JPG" class="d-block w-100" alt="5"></div>
-                    <div class="carousel-item"><img src="./images/3edicao6.JPG" class="d-block w-100" alt="6"></div>
+          
+            <div class="tab-pane fade" id="edicao1" role="tabpanel">
+              <div class="pixel-box p-4">
+                                <div class="row">
+                  <div class="col-md-6">
+                    <h3>3ª Edição</h3>
+                    <p><strong>Público:</strong> 2500 Pessoas</p>
+                    <p><strong>Local:</strong> AABB - Associação Banco do Brasil</p>
+                    <p>Ingressos esgotados. Primeiro evento dos Campos Gerais com dubladores nacionais. Atrações: Artist Alley, RPG, Card Game, Games, Concurso e Apresentação K-pop, desfile cosplay e muito mais.</p>
                   </div>
-                  <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  </a>
+                  <div class="col-md-6">
+                    <div id="carouselEdicao3" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="./images/3edicao-1.jpg" class="d-block w-100 pixel-image" alt="1"></div>
+                        <div class="carousel-item"><img src="./images/3edicao2.jpg" class="d-block w-100 pixel-image" alt="2"></div>
+                        <div class="carousel-item"><img src="./images/3edicao3.jpg" class="d-block w-100 pixel-image" alt="3"></div>
+                        <div class="carousel-item"><img src="./images/3edicao4.jpg" class="d-block w-100 pixel-image" alt="4"></div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselEdicao3" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                      <a class="carousel-control-next" href="#carouselEdicao3" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-      
-          <!-- Halloween -->
-          <div class="tab-pane fade" id="edicaoHalloween" role="tabpanel">
-            <div class="row">
-              <div class="content-text col-md-6">
-                <h3>Geektopia de Halloween</h3>
-                <p><strong>Público:</strong> 317 Pessoas</p>
-                <p><strong>Local:</strong> Billi's Burguer</p>
-                <p>Ingressos esgotados. Atrações: Card Game, Apresentação K-pop, desfile cosplay, lojas dos parceiros.</p>
-              </div>
-              <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <div id="carousel3" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active"><img src="./images/halloween.jpg" class="d-block w-100" alt="1"></div>
-                    <div class="carousel-item"><img src="./images/halloween2.jpg" class="d-block w-100" alt="2"></div>
+                        <div class="tab-pane fade" id="edicaoHalloween" role="tabpanel">
+               <div class="pixel-box p-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>Geektopia de Halloween</h3>
+                    <p><strong>Público:</strong> 317 Pessoas</p>
+                    <p><strong>Local:</strong> Billi's Burguer</p>
+                    <p>Ingressos esgotados. Atrações: Card Game, Apresentação K-pop, desfile cosplay temático e lojas.</p>
                   </div>
-                  <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  </a>
+                  <div class="col-md-6">
+                    <div id="carouselHalloween" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="./images/halloween.jpg" class="d-block w-100 pixel-image" alt="1"></div>
+                        <div class="carousel-item"><img src="./images/halloween2.jpg" class="d-block w-100 pixel-image" alt="2"></div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselHalloween" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                      <a class="carousel-control-next" href="#carouselHalloween" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          
           </div>
-      
-        </div>
       </div>
-      
-          <div class="tab-pane fade" id="contato">
+      <div class="tab-pane fade" id="contato">
         <h2>Contato</h2>
         <div class="row">
-          <div class="col-md-6">
-            <form action="https://formspree.io/f/xvoevzyr" method="POST">
-              <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" name="name" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" name="_replyto" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Mensagem:</label>
-                <textarea name="message" class="form-control" rows="5" required></textarea>
-              </div>
-              <input type="hidden" name="_subject" value="Novo formulário de contato recebido">
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+          <div class="col-md-6 mb-4">
+            <div class="pixel-box p-4">
+                <form action="https://formspree.io/f/xvoevzyr" method="POST">
+                  <div class="form-group">
+                    <label for="name">NOME:</label>
+                    <input type="text" name="name" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" name="_replyto" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">MENSAGEM:</label>
+                    <textarea name="message" class="form-control" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="btn-pixel">Enviar Mensagem</button>
+                </form>
+            </div>
           </div>
           <div class="col-md-6">
-            <ul class="list-unstyled">
-              <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/ccpop.pg/">@ccpop.pg</a></li>
-              <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/geektopia.pg/">@geektopia.pg</a></li>
-              <li><i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@ccpop.pg">@ccpop.pg</a></li>
-              <li><i class="fas fa-envelope"></i> <a href="mailto:cocpopg.contato@gmail.com">cocpopg.contato@gmail.com</a></li>
-            </ul>
+            <div class="pixel-box p-4">
+                <ul class="list-unstyled">
+                  <li><a href="https://www.instagram.com/ccpop.pg/"><i class="fab fa-instagram"></i> @ccpop.pg</a></li>
+                  <li><a href="https://www.instagram.com/geektopia.pg/"><i class="fab fa-instagram"></i> @geektopia.pg</a></li>
+                  <li><a href="https://www.tiktok.com/@ccpop.pg"><i class="fab fa-tiktok"></i> @ccpop.pg</a></li>
+                  <li><a href="mailto:cocpopg.contato@gmail.com"><i class="fas fa-envelope"></i> cocpopg.contato@gmail.com</a></li>
+                </ul>
+            </div>
           </div>
         </div>
       </div>
-       
-      </div>
-
-
     </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800 });
-</script>
+  
   <script>
+    // Seu script do contador continua igual, ele é ótimo!
     const eventDate = new Date("2025-08-16T10:00:00").getTime();
     const countdownElement = document.getElementById("countdown");
-  
     const updateCountdown = () => {
       const now = new Date().getTime();
       const timeLeft = eventDate - now;
-  
       if (timeLeft < 0) {
-        countdownElement.innerHTML = "O evento já começou!";
+        countdownElement.innerHTML = "O EVENTO JÁ COMEÇOU!";
         return;
       }
-  
       const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
       const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-  
       countdownElement.innerHTML = `
-        <span class="mr-2"><strong>${days}</strong> dias</span>
-        <span class="mr-2"><strong>${hours}</strong>h</span>
-        <span class="mr-2"><strong>${minutes}</strong>min</span>
-        <span><strong>${seconds}</strong>s</span>
-        <div class="mt-2" style="font-size: 1rem;">PARA VIVERMOS O GEEKTOPIA!</div>
+        <span>${days}d</span> : <span>${hours}h</span> : <span>${minutes}m</span> : <span>${seconds}s</span>
+        <div style="font-size: 1rem; margin-top: 10px;">PARA VIVERMOS O GEEKTOPIA!</div>
       `;
     };
-  
-    updateCountdown();
     setInterval(updateCountdown, 1000);
+    updateCountdown();
   </script>
-  
 </body>
 </html>
