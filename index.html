@@ -245,7 +245,7 @@
       const now = new Date().getTime();
       const timeLeft = eventDate - now;
       if (timeLeft < 0) {
-        countdownElement.innerHTML = "O EVENTO JÁ COMEÇOU!";
+        countdownElement.innerHTML = "Obrigado pela sua participação!";
         return;
       }
       const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
