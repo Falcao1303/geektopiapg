@@ -7,212 +7,603 @@
 
 /* --- CONFIGURAÇÕES GLOBAIS --- */
 body {
-  /* O seu gradiente de fundo é ótimo, vamos mantê-lo! */
-  background: linear-gradient(135deg, #68DA6A 0%, #2B6DDD 100%);
-  background-attachment: fixed; /* O fundo não rola com a página */
+  /* Gradiente animado mais dinâmico */
+  background: linear-gradient(45deg, #68DA6A 0%, #2B6DDD 25%, #8B5CF6 50%, #EC4899 75%, #68DA6A 100%);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradientShift 15s ease infinite;
   
   /* Usando a fonte VT323 como padrão para parágrafos */
   font-family: 'VT323', monospace;
-  font-size: 20px; /* Fontes pixeladas ficam melhores um pouco maiores */
+  font-size: 22px;
   color: #FFFFFF;
-  line-height: 1.5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 h1, h2, h3, h4, h5, h6 {
   /* Fonte de videogame para todos os títulos */
   font-family: 'Press Start 2P', cursive;
-  color: #FFFFFF; /* Cor branca para contrastar com o fundo */
-  text-shadow: 2px 2px #000000; /* Sombra dura para dar um ar retrô */
+  color: #FFFFFF;
+  text-shadow: 3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.3);
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.3), 0 0 20px rgba(104, 218, 106, 0.5); }
+  to { text-shadow: 3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.3), 0 0 30px rgba(104, 218, 106, 0.8), 0 0 40px rgba(104, 218, 106, 0.6); }
 }
 
 /* --- NAVEGAÇÃO PIXEL --- */
 .nav-pixel {
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6), rgba(0,0,0,0.8));
   border-bottom: 4px solid #000;
-  padding: 5px;
+  padding: 8px;
   text-align: center;
-  flex-wrap: wrap; /* Permite que os links quebrem a linha em telas pequenas */
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  z-index: 1000;
+  min-height: 60px;
+  align-items: center;
 }
 
 .nav-pixel .nav-link {
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
   color: #FFFFFF;
-  padding: 10px 15px;
+  padding: 12px 18px;
   text-transform: uppercase;
-  transition: all 0.2s ease;
-  border: none;
-  border-radius: 0; /* SEM cantos arredondados */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  border-radius: 0;
+  position: relative;
+  margin: 2px;
+  overflow: hidden;
+}
+
+.nav-pixel .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-pixel .nav-link:hover::before {
+  left: 100%;
 }
 
 .nav-pixel .nav-link:hover,
 .nav-pixel .nav-link.active {
   background-color: #68DA6A;
   color: #000;
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(104, 218, 106, 0.4);
 }
 
 
 /* --- CAIXA DE CONTEÚDO PIXEL --- */
 .pixel-box {
-  background-color: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(20,20,20,0.8) 50%, rgba(0,0,0,0.6) 100%);
   border: 4px solid #000;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3); /* Sombra dura deslocada */
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4), 0 0 30px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.pixel-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #68DA6A, #2B6DDD, #8B5CF6, #EC4899);
+  background-size: 200% 100%;
+  animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+.pixel-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.4), 0 10px 40px rgba(104, 218, 106, 0.2);
 }
 
 .pixel-box h2, .pixel-box h3 {
-    color: #68DA6A; /* Cor verde para títulos dentro das caixas */
-    text-shadow: 2px 2px #000;
+    color: #68DA6A;
+    text-shadow: 2px 2px 0px #000, 0 0 20px rgba(104, 218, 106, 0.5);
+    position: relative;
 }
 
 /* --- IMAGENS PIXELADAS --- */
 .pixel-image {
   border: 4px solid #000;
-  /* Isso faz o navegador não suavizar a imagem ao redimensionar, mantendo os pixels duros */
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-image:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 25px rgba(104, 218, 106, 0.3);
+  border-color: #68DA6A;
+}
+
+.img-fluid.pixel-image:hover {
+  filter: brightness(1.1) contrast(1.1);
 }
 
 /* --- BOTÃO PIXEL --- */
 .btn-pixel {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
-  background-color: #68DA6A; /* Verde */
+  background: linear-gradient(45deg, #68DA6A, #7AE47C);
   color: #000000;
   border: 3px solid #000000;
-  padding: 15px 25px;
+  padding: 18px 30px;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 4px 4px 0px #000000; /* Efeito de sombra dura */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 6px 6px 0px #000000, 0 0 20px rgba(104, 218, 106, 0.3);
   position: relative;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.btn-pixel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.btn-pixel:hover::before {
+  left: 100%;
 }
 
 .btn-pixel:hover {
-  background-color: #2B6DDD; /* Azul no hover */
+  background: linear-gradient(45deg, #2B6DDD, #4F7BF7);
   color: #FFFFFF;
   text-decoration: none;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 8px 8px 0px #000000, 0 10px 30px rgba(43, 109, 221, 0.4);
 }
 
 .btn-pixel:active {
-  /* Efeito de botão pressionado */
-  box-shadow: 0px 0px 0px #000000;
-  top: 4px;
-  left: 4px;
+  box-shadow: 2px 2px 0px #000000;
+  transform: translateY(2px) scale(0.98);
 }
 
 /* --- CONTADOR --- */
 #countdown {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #FFFFFF;
-  text-shadow: 3px 3px #000;
+  text-shadow: 3px 3px 0px #000, 0 0 20px rgba(255,255,255,0.5);
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    text-shadow: 3px 3px 0px #000, 0 0 20px rgba(255,255,255,0.5);
+  }
+  to {
+    transform: scale(1.05);
+    text-shadow: 3px 3px 0px #000, 0 0 30px rgba(104, 218, 106, 0.8), 0 0 40px rgba(43, 109, 221, 0.6);
+  }
+}
+
+#countdown span {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(20,20,20,0.9));
+  border: 3px solid #68DA6A;
+  box-shadow: 0 0 15px rgba(104, 218, 106, 0.3);
 }
 
 /* --- FORMULÁRIO DE CONTATO --- */
 #contato label {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #68DA6A;
+    text-shadow: 1px 1px 0px #000;
+    margin-bottom: 8px;
+    display: block;
 }
 
 #contato .form-control {
   border-radius: 0;
   border: 3px solid #000;
-  background-color: #fff;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
   font-family: 'VT323', monospace;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #000;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 }
 
 #contato .form-control:focus {
-  background-color: #fff;
+  background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
   color: #000;
   border-color: #68DA6A;
-  box-shadow: none;
+  box-shadow: 0 0 0 3px rgba(104, 218, 106, 0.3), 5px 5px 0px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+#contato .form-control:hover {
+  border-color: #2B6DDD;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
 }
 
 
 /* --- LINKS DE CONTATO --- */
 #contato ul {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  list-style: none;
+  padding: 0;
 }
+
+#contato ul li {
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+#contato ul li:hover {
+  transform: translateX(10px);
+}
+
 #contato a {
     color: #FFFFFF;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
 }
+
+#contato a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(104, 218, 106, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+#contato a:hover::before {
+    left: 100%;
+}
+
 #contato a:hover {
     color: #68DA6A;
+    border-color: #68DA6A;
+    text-shadow: 0 0 10px rgba(104, 218, 106, 0.5);
+    transform: scale(1.05);
 }
+
 #contato .fab, #contato .fas {
-    margin-right: 10px;
+    margin-right: 12px;
     color: #68DA6A;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+}
+
+#contato a:hover .fab,
+#contato a:hover .fas {
+    transform: rotate(360deg) scale(1.2);
+    color: #FFFFFF;
 }
 
 /* --- ESTILOS PARA O CARROSSEL PIXEL --- */
 .carousel {
   border: 4px solid #000;
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.3), 0 0 25px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-/* Deixando os botões de controle quadrados e com fundo sólido */
+.carousel:hover {
+  box-shadow: 12px 12px 0px rgba(0,0,0,0.4), 0 0 35px rgba(104, 218, 106, 0.3);
+  border-color: #68DA6A;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(20,20,20,0.9));
   border: 3px solid #000;
   opacity: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(5px);
 }
 
 .carousel-control-prev {
-  left: 10px;
+  left: 15px;
 }
+
 .carousel-control-next {
-  right: 10px;
+  right: 15px;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background-color: #68DA6A;
+  background: linear-gradient(45deg, #68DA6A, #7AE47C);
+  border-color: #000;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(104, 218, 106, 0.5);
 }
 
-/* Trocando o ícone padrão (SVG suave) por um mais simples e branco */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-image: none; /* Remove a imagem de fundo padrão */
+  background-image: none;
   color: white;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1;
-  font-family: monospace; /* Usa uma fonte monoespaçada que parece mais bloco */
+  font-family: 'Press Start 2P', cursive;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  color: #000;
+  transform: scale(1.2);
 }
 
 .carousel-control-prev-icon::after {
-  content: '<'; /* Adiciona o caractere de "menor que" */
+  content: '<';
 }
 
 .carousel-control-next-icon::after {
-  content: '>'; /* Adiciona o caractere de "maior que" */
+  content: '>';
+}
+
+.carousel-item img {
+  transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
 }
 
 /* Ajustando as abas das edições para combinar com o tema */
+#edicoes-anteriores .nav-tabs {
+  border-bottom: 4px solid #000;
+  margin-bottom: 0;
+}
+
 #edicoes-anteriores .nav-tabs .nav-link {
   font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
-  border: 3px solid transparent;
+  font-size: 11px;
+  border: 3px solid #000;
   color: #fff;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,20,0.8));
+  margin-right: 5px;
+  margin-bottom: -4px;
+  padding: 12px 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
+
+#edicoes-anteriores .nav-tabs .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s;
+}
+
+#edicoes-anteriores .nav-tabs .nav-link:hover::before {
+  left: 100%;
+}
+
 #edicoes-anteriores .nav-tabs .nav-link.active,
 #edicoes-anteriores .nav-tabs .nav-link:hover {
   border-color: #000;
-  background-color: #68DA6A;
+  background: linear-gradient(135deg, #68DA6A, #7AE47C);
   color: #000;
-  border-bottom-color: #68DA6A; /* Para conectar com a caixa */
+  border-bottom-color: #68DA6A;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(104, 218, 106, 0.4);
+}
+
+#edicoes-anteriores .nav-tabs .nav-link.active {
+  border-bottom-color: #68DA6A;
+  z-index: 10;
+}
+
+/* --- RESPONSIVIDADE E MELHORIAS MOBILE --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+  
+  .nav-pixel {
+    padding: 5px;
+    min-height: 50px;
+  }
+  
+  .nav-pixel .nav-link {
+    font-size: 10px;
+    padding: 8px 12px;
+    margin: 1px;
+  }
+  
+  .pixel-box {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #countdown {
+    font-size: 1.3rem;
+  }
+  
+  #countdown span {
+    padding: 8px 10px;
+    margin: 0 2px;
+  }
+  
+  .btn-pixel {
+    padding: 15px 20px;
+    font-size: 12px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-control-prev {
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    right: 10px;
+  }
+  
+  #edicoes-anteriores .nav-tabs .nav-link {
+    font-size: 9px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-pixel .nav-link {
+    font-size: 8px;
+    padding: 6px 8px;
+  }
+  
+  #countdown {
+    font-size: 1rem;
+  }
+  
+  .btn-pixel {
+    padding: 12px 16px;
+    font-size: 10px;
+  }
+  
+  #edicoes-anteriores .nav-tabs .nav-link {
+    font-size: 8px;
+    padding: 8px 10px;
+  }
+}
+
+/* --- EFEITOS ADICIONAIS DE ENTRADA --- */
+.container {
+  animation: fadeInUp 0.8s ease-out;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- SCROLL SUAVE --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- HOVER EFFECTS PARA ELEMENTOS INTERATIVOS --- */
+p {
+  transition: all 0.2s ease;
+}
+
+.pixel-box p:hover {
+  transform: translateX(5px);
+  color: #E0E0E0;
+}
+
+/* --- EFEITO DE LOADING/SHIMMER --- */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.pixel-box:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.pixel-box:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+/* --- ESTILOS ADICIONAIS PARA EFEITOS DE FUNDO --- */
+.container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(104, 218, 106, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(43, 109, 221, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
