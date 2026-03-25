@@ -187,10 +187,12 @@ h3 {
 
 /* --- AJUSTE DE TAMANHO DAS IMAGENS DA HOME --- */
 .home-banner {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  object-position: center;
+  display: block;
+  width: min(100%, 1200px);
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-sponsors {
@@ -201,6 +203,32 @@ h3 {
   object-fit: contain;
   margin-left: auto;
   margin-right: auto;
+}
+
+.event-info-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+}
+
+.event-info-item {
+  padding: 8px 14px;
+  border: 2px solid #000;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.2));
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.home-cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 /* --- BOTÃO PIXEL --- */
@@ -679,7 +707,21 @@ h3 {
   }
 
   .home-banner {
-    max-height: 380px;
+    width: 100%;
+  }
+
+  .event-info-strip {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .event-info-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-cta-buttons {
+    gap: 10px;
   }
 
   .home-sponsors {
@@ -742,7 +784,16 @@ h3 {
   }
 
   .home-banner {
-    max-height: 260px;
+    width: 100%;
+  }
+
+  .home-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-cta-buttons .btn-pixel {
+    width: 100%;
   }
 
   .home-sponsors {

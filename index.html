@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Geektopia - O maior evento de cultura nerd e geek dos Campos Gerais! Cosplay, games, k-pop e muito mais!">
+  <meta name="theme-color" content="#2080FF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Geektopia - O Evento Mais Geek de PG!">
+  <meta property="og:description" content="Cosplay, games, k-pop, lojas e atrações especiais no maior evento geek dos Campos Gerais.">
+  <meta property="og:image" content="./images/bannersitenovo.jpeg">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Geektopia - O Evento Mais Geek de PG!">
+  <meta name="twitter:description" content="Cosplay, games, k-pop, lojas e atrações especiais no maior evento geek dos Campos Gerais.">
+  <meta name="twitter:image" content="./images/bannersitenovo.jpeg">
   <title>Geektopia - O Evento Mais Geek de PG!</title>
   
   <!-- Bootstrap 5.3 -->
@@ -37,14 +47,24 @@
     <div class="tab-content">
       
       <div class="tab-pane fade show active" id="home" role="tabpanel">
+        <div class="pixel-box event-info-strip" data-aos="fade-up">
+          <div class="event-info-item"><strong>Data:</strong> 12 de Agosto de 2026</div>
+          <div class="event-info-item"><strong>Horário:</strong> 13h</div>
+          <div class="event-info-item"><strong>Cidade:</strong> Ponta Grossa - PR</div>
+        </div>
+
         <div class="text-center" data-aos="fade-up">
-          <img src="./images/bannersitenovo.jpeg" alt="Banner Geektopia 2026" class="img-fluid pixel-image home-banner mb-4">
+          <img src="./images/bannersitenovo.jpeg" alt="Banner oficial do Geektopia 2026" class="img-fluid pixel-image home-banner mb-4" fetchpriority="high" decoding="async">
           <h1 class="mb-3">BEM-VINDO AO GEEKTOPIA!</h1>
           <p class="mx-auto lead" style="max-width: 800px;">
             Um evento onde você pode encontrar amigos, fazer amigos que amam a cultura pop!<br>
             Feito por amantes de tudo que há de incrível na cultura nerd e geek.<br>
             Um lugar feito para conhecer, sentir e viver a <strong>GEEKTOPIA</strong>!
           </p>
+          <div class="home-cta-buttons" data-aos="zoom-in" data-aos-delay="100">
+            <button class="btn-pixel home-tab-btn" data-target-tab="#contato" type="button">Fale Conosco</button>
+            <button class="btn-pixel home-tab-btn" data-target-tab="#edicoes-anteriores" type="button">Ver Edições</button>
+          </div>
         </div>
         
         <div id="countdown" class="pixel-box text-center my-4 p-3" data-aos="zoom-in" data-aos-delay="200">
@@ -73,7 +93,7 @@
         </div>
 
         <div data-aos="fade-up" data-aos-delay="400">
-          <img src="./images/patrocinio.png" alt="Patrocinadores" class="img-fluid pixel-image home-sponsors mt-4">
+          <img src="./images/patrocinio.png" alt="Patrocinadores oficiais do evento" class="img-fluid pixel-image home-sponsors mt-4" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -86,7 +106,7 @@
                 <p>Conselho fundado em 27/05/2023, com a ideia de reunir as mentes nerds de Ponta Grossa - PR para fomentar um cenário ainda pouco explorado na região. Um espaço para fãs de animes, filmes, séries, livros, k-pop e cosplayers compartilharem suas paixões, contribuindo para a cultura e o turismo local.</p>
               </div>
               <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="200">
-                <img src="./images/logo_ccpop.png" class="img-fluid pixel-image" alt="Logo CCPOP">
+                <img src="./images/logo_ccpop.png" class="img-fluid pixel-image" alt="Logo do Conselho de Cultura Pop" loading="lazy" decoding="async">
               </div>
             </div>
         </div>
@@ -97,7 +117,7 @@
             <h2>Sobre o Evento</h2>
             <div class="row align-items-center">
               <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                <img src="./images/geektopia2.JPG" class="img-fluid pixel-image" alt="Sobre o Evento">
+                <img src="./images/geektopia2.JPG" class="img-fluid pixel-image" alt="Foto do público do Geektopia" loading="lazy" decoding="async">
               </div>
               <div class="col-md-6">
                 <p>O Geektopia nasceu da mente criativa do Conselho de Cultura Pop, liderado por Ariadene Caillot. A ideia era criar um evento diferente, pensado por quem ama e frequenta o universo pop. A primeira edição, no Teatro Ceci, foi um sucesso de ingressos esgotados, dando espaço a artistas e lojistas da região. Hoje, após edições de sucesso, o céu é o limite para quem quer viver a Geektopia!</p>
@@ -147,15 +167,15 @@
                 </div>
                 <div class="gallery-grid">
                   <a href="./images/geektopia1.JPG" class="glightbox gallery-item" data-gallery="edicao1">
-                    <img src="./images/geektopia1.JPG" class="img-fluid pixel-image" alt="Geektopia 1ª Edição - Foto 1">
+                    <img src="./images/geektopia1.JPG" class="img-fluid pixel-image" alt="Geektopia 1ª Edição - Foto 1" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/geektopia2.JPG" class="glightbox gallery-item" data-gallery="edicao1">
-                    <img src="./images/geektopia2.JPG" class="img-fluid pixel-image" alt="Geektopia 1ª Edição - Foto 2">
+                    <img src="./images/geektopia2.JPG" class="img-fluid pixel-image" alt="Geektopia 1ª Edição - Foto 2" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/geektopia3.JPG" class="glightbox gallery-item" data-gallery="edicao1">
-                    <img src="./images/geektopia3.JPG" class="img-fluid pixel-image" alt="Geektopia 1ª Edição - Foto 3">
+                    <img src="./images/geektopia3.JPG" class="img-fluid pixel-image" alt="Geektopia 1ª Edição - Foto 3" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                 </div>
@@ -180,11 +200,11 @@
                 </div>
                 <div class="gallery-grid">
                   <a href="./images/natal1.jpg" class="glightbox gallery-item" data-gallery="edicao2">
-                    <img src="./images/natal1.jpg" class="img-fluid pixel-image" alt="Natal Otaku - Foto 1">
+                    <img src="./images/natal1.jpg" class="img-fluid pixel-image" alt="Natal Otaku - Foto 1" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/natal2.jpg" class="glightbox gallery-item" data-gallery="edicao2">
-                    <img src="./images/natal2.jpg" class="img-fluid pixel-image" alt="Natal Otaku - Foto 2">
+                    <img src="./images/natal2.jpg" class="img-fluid pixel-image" alt="Natal Otaku - Foto 2" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                 </div>
@@ -209,23 +229,23 @@
                 </div>
                 <div class="gallery-grid gallery-grid-large">
                   <a href="./images/3edicao-1.jpg" class="glightbox gallery-item" data-gallery="edicao3">
-                    <img src="./images/3edicao-1.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 1">
+                    <img src="./images/3edicao-1.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 1" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/3edicao2.jpg" class="glightbox gallery-item" data-gallery="edicao3">
-                    <img src="./images/3edicao2.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 2">
+                    <img src="./images/3edicao2.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 2" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/3edicao3.jpg" class="glightbox gallery-item" data-gallery="edicao3">
-                    <img src="./images/3edicao3.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 3">
+                    <img src="./images/3edicao3.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 3" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/3edicao4.jpg" class="glightbox gallery-item" data-gallery="edicao3">
-                    <img src="./images/3edicao4.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 4">
+                    <img src="./images/3edicao4.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 4" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/3edicao6.jpg" class="glightbox gallery-item" data-gallery="edicao3">
-                    <img src="./images/3edicao6.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 5">
+                    <img src="./images/3edicao6.jpg" class="img-fluid pixel-image" alt="3ª Edição - Foto 5" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                 </div>
@@ -250,11 +270,11 @@
                 </div>
                 <div class="gallery-grid">
                   <a href="./images/halloween.jpg" class="glightbox gallery-item" data-gallery="halloween">
-                    <img src="./images/halloween.jpg" class="img-fluid pixel-image" alt="Halloween - Foto 1">
+                    <img src="./images/halloween.jpg" class="img-fluid pixel-image" alt="Halloween - Foto 1" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   <a href="./images/halloween2.jpg" class="glightbox gallery-item" data-gallery="halloween">
-                    <img src="./images/halloween2.jpg" class="img-fluid pixel-image" alt="Halloween - Foto 2">
+                    <img src="./images/halloween2.jpg" class="img-fluid pixel-image" alt="Halloween - Foto 2" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                 </div>
@@ -287,32 +307,32 @@
                 <!-- Galeria de fotos da 4ª Edição -->
                 <div class="gallery-grid gallery-grid-large">
                   <a href="./images/4edicao/1.jpg" class="glightbox gallery-item gallery-item-vertical" data-gallery="edicao4">
-                    <img src="./images/4edicao/1.jpg" class="img-fluid pixel-image" alt="4ª Edição - Momento do evento 1">
+                    <img src="./images/4edicao/1.jpg" class="img-fluid pixel-image" alt="4ª Edição - Momento do evento 1" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   
                   <a href="./images/4edicao/2.jpg" class="glightbox gallery-item gallery-item-vertical" data-gallery="edicao4">
-                    <img src="./images/4edicao/2.jpg" class="img-fluid pixel-image" alt="4ª Edição - Momento do evento 2">
+                    <img src="./images/4edicao/2.jpg" class="img-fluid pixel-image" alt="4ª Edição - Momento do evento 2" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   
                   <a href="./images/4edicao/20250816_143932.jpg" class="glightbox gallery-item" data-gallery="edicao4">
-                    <img src="./images/4edicao/20250816_143932.jpg" class="img-fluid pixel-image" alt="4ª Edição - Público e atividades">
+                    <img src="./images/4edicao/20250816_143932.jpg" class="img-fluid pixel-image" alt="4ª Edição - Público e atividades" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   
                   <a href="./images/4edicao/20250816_160635.jpg" class="glightbox gallery-item" data-gallery="edicao4">
-                    <img src="./images/4edicao/20250816_160635.jpg" class="img-fluid pixel-image" alt="4ª Edição - Atrações">
+                    <img src="./images/4edicao/20250816_160635.jpg" class="img-fluid pixel-image" alt="4ª Edição - Atrações" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   
                   <a href="./images/4edicao/20250816_174657.jpg" class="glightbox gallery-item" data-gallery="edicao4">
-                    <img src="./images/4edicao/20250816_174657.jpg" class="img-fluid pixel-image" alt="4ª Edição - Cosplay e apresentações">
+                    <img src="./images/4edicao/20250816_174657.jpg" class="img-fluid pixel-image" alt="4ª Edição - Cosplay e apresentações" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                   
                   <a href="./images/4edicao/20250817_162606.jpg" class="glightbox gallery-item" data-gallery="edicao4">
-                    <img src="./images/4edicao/20250817_162606.jpg" class="img-fluid pixel-image" alt="4ª Edição - Comunidade geek">
+                    <img src="./images/4edicao/20250817_162606.jpg" class="img-fluid pixel-image" alt="4ª Edição - Comunidade geek" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                   </a>
                 </div>
@@ -348,7 +368,7 @@
                 <h3 class="mb-4">Redes Sociais</h3>
                 <ul class="list-unstyled social-links">
                   <li><a href="https://www.instagram.com/ccpop.pg/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @ccpop.pg</a></li>
-                  <li><a href="https://www.instagram.com/geektopia.pg/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @geektopia.pg</a></li>
+                  <li><a href="https://www.instagram.com/geektopia_pg/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @geektopia_pg</a></li>
                   <li><a href="https://www.tiktok.com/@ccpop.pg" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> @ccpop.pg</a></li>
                   <li><a href="mailto:cocpopg.contato@gmail.com"><i class="fas fa-envelope"></i> cocpopg.contato@gmail.com</a></li>
                 </ul>
@@ -413,6 +433,21 @@
     
     setInterval(updateCountdown, 1000);
     updateCountdown();
+
+    // Botões da Home abrindo abas principais com API do Bootstrap
+    const openMainTab = (targetSelector) => {
+      const tabTrigger = document.querySelector(`#geektopiaTabs [data-bs-target="${targetSelector}"]`);
+      if (!tabTrigger) return;
+      const tabInstance = bootstrap.Tab.getOrCreateInstance(tabTrigger);
+      tabInstance.show();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    document.querySelectorAll('.home-tab-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        openMainTab(button.dataset.targetTab);
+      });
+    });
 
     // Scroll suave para links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
