@@ -185,6 +185,24 @@ h3 {
   filter: brightness(1.1) contrast(1.1);
 }
 
+/* --- AJUSTE DE TAMANHO DAS IMAGENS DA HOME --- */
+.home-banner {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-sponsors {
+  display: block;
+  width: min(100%, 620px);
+  max-height: 700px;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --- BOTÃO PIXEL --- */
 .btn-pixel {
   font-family: 'Press Start 2P', cursive;
@@ -659,6 +677,15 @@ h3 {
     font-size: 9px;
     padding: 10px 12px;
   }
+
+  .home-banner {
+    max-height: 380px;
+  }
+
+  .home-sponsors {
+    width: min(100%, 460px);
+    max-height: 560px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -712,6 +739,15 @@ h3 {
   #edicoes-anteriores .nav-tabs .nav-link {
     font-size: 8px;
     padding: 8px 10px;
+  }
+
+  .home-banner {
+    max-height: 260px;
+  }
+
+  .home-sponsors {
+    width: min(100%, 340px);
+    max-height: 430px;
   }
 }
 
@@ -875,4 +911,146 @@ strong {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+/* --- TEMA VISUAL ALINHADO AO NOVO BANNER --- */
+:root {
+  --banner-blue-strong: #2080FF;
+  --banner-blue-main: #40A0FF;
+  --banner-blue-soft: #60C0FF;
+  --banner-blue-light: #C0E0FF;
+  --banner-purple-main: #6000A0;
+  --banner-purple-deep: #400080;
+}
+
+body {
+  background: linear-gradient(45deg, var(--banner-blue-strong) 0%, var(--banner-blue-main) 30%, var(--banner-purple-main) 65%, var(--banner-purple-deep) 100%);
+  background-size: 400% 400%;
+}
+
+h1 {
+  text-shadow: 3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.3), 0 0 26px rgba(64, 160, 255, 0.45);
+}
+
+.nav-pixel .nav-link:hover,
+.nav-pixel .nav-link.active {
+  background: linear-gradient(135deg, var(--banner-blue-main), var(--banner-blue-soft));
+  color: #001733;
+  box-shadow: 0 6px 20px rgba(64, 160, 255, 0.45);
+}
+
+.pixel-box::before {
+  background: linear-gradient(90deg, var(--banner-blue-soft), var(--banner-blue-main), var(--banner-purple-main), var(--banner-purple-deep));
+}
+
+.pixel-box h2,
+.pixel-box h3,
+strong {
+  color: var(--banner-blue-light);
+  text-shadow: 2px 2px 0px #000, 0 0 18px rgba(64, 160, 255, 0.35);
+}
+
+.pixel-box:hover {
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.4), 0 10px 40px rgba(64, 160, 255, 0.22);
+}
+
+.pixel-image:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 25px rgba(64, 160, 255, 0.35);
+  border-color: var(--banner-blue-main);
+}
+
+.btn-pixel {
+  background: linear-gradient(45deg, var(--banner-blue-main), var(--banner-blue-soft));
+  color: #001733;
+  box-shadow: 6px 6px 0px #000000, 0 0 22px rgba(64, 160, 255, 0.35);
+}
+
+.btn-pixel:hover {
+  background: linear-gradient(45deg, var(--banner-purple-main), var(--banner-blue-strong));
+  color: #FFFFFF;
+  box-shadow: 8px 8px 0px #000000, 0 10px 30px rgba(96, 0, 160, 0.35);
+}
+
+#countdown {
+  border-color: var(--banner-blue-main);
+  box-shadow: 0 0 30px rgba(64, 160, 255, 0.42), 8px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.countdown-value {
+  border-color: var(--banner-blue-main);
+  box-shadow: 0 0 20px rgba(64, 160, 255, 0.32), inset 0 0 10px rgba(64, 160, 255, 0.14);
+}
+
+.countdown-label,
+.countdown-separator {
+  color: var(--banner-blue-light);
+  text-shadow: 3px 3px 0px #000, 0 0 10px rgba(64, 160, 255, 0.45);
+}
+
+#contato .form-control:focus {
+  border-color: var(--banner-blue-main);
+  box-shadow: 0 0 0 3px rgba(64, 160, 255, 0.35), 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+#contato a:hover {
+  color: var(--banner-blue-light);
+  border-color: var(--banner-blue-main);
+  text-shadow: 0 0 10px rgba(64, 160, 255, 0.45);
+}
+
+#contato .fab,
+#contato .fas {
+  color: var(--banner-blue-main);
+}
+
+.gallery-item:hover {
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4), 0 10px 40px rgba(64, 160, 255, 0.35);
+  border-color: var(--banner-blue-main);
+}
+
+.gallery-overlay {
+  background: linear-gradient(135deg, rgba(64, 160, 255, 0.9), rgba(96, 0, 160, 0.88));
+}
+
+.gallery-placeholder {
+  border-color: var(--banner-blue-main);
+}
+
+.gallery-placeholder i,
+.gallery-placeholder p {
+  color: var(--banner-blue-light);
+}
+
+#edicoes-anteriores .nav-tabs .nav-link.active,
+#edicoes-anteriores .nav-tabs .nav-link:hover {
+  background: linear-gradient(135deg, var(--banner-blue-main), var(--banner-blue-soft));
+  color: #001733;
+  border-bottom-color: var(--banner-blue-main);
+  box-shadow: 0 6px 20px rgba(64, 160, 255, 0.45);
+}
+
+#edicoes-anteriores .nav-tabs .nav-link.active {
+  border-bottom-color: var(--banner-blue-main);
+}
+
+.container::before {
+  background: radial-gradient(circle at 20% 80%, rgba(64, 160, 255, 0.14) 0%, transparent 52%),
+              radial-gradient(circle at 80% 20%, rgba(96, 0, 160, 0.12) 0%, transparent 52%),
+              radial-gradient(circle at 40% 40%, rgba(192, 224, 255, 0.08) 0%, transparent 52%);
+}
+
+::-webkit-scrollbar-track {
+  border-left-color: var(--banner-blue-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--banner-blue-main), var(--banner-purple-main));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--banner-blue-soft), var(--banner-blue-strong));
+}
+
+*:focus-visible {
+  outline-color: var(--banner-blue-main);
 }
